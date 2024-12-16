@@ -24,10 +24,12 @@ function Convert-PathSlash {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
+        # [Alias("FilePath")]
         [string]$Path,
         
         [Parameter(Mandatory = $false)]
-        [switch]$IncludeDrive
+        [Alias("with_drive")]
+        [switch]$IncludeDrive = $false
     )
 	
 	
